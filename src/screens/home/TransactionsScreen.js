@@ -1,5 +1,10 @@
 import React from "react";
-import { View, Text, StyleSheet, TouchableNativeFeedback } from "react-native";
+import {
+  View,
+  Text,
+  StyleSheet,
+  TouchableNativeFeedback,
+} from "react-native";
 import { FlatList } from "react-navigation";
 import { Divider, FAB } from "react-native-paper";
 import Icon from "react-native-vector-icons/MaterialIcons";
@@ -22,7 +27,7 @@ const TransactionItem = ({ transaction, index }) => {
   );
 };
 
-const Transactions = ({ navigation: { navigate } }) => {
+const Transactions = () => {
   return (
     <View style={styles.container}>
       <View style={styles.headerContainer}>
@@ -61,7 +66,8 @@ const Transactions = ({ navigation: { navigate } }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    backgroundColor: COLORS.icons
   },
   headerContainer: {
     paddingVertical: 8,

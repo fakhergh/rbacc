@@ -10,6 +10,7 @@ const Settings = ({ navigation: { navigate } }) => {
         <Text>* About us</Text>
         <Text>* Other options...</Text>
       </View>
+
       <View style={{ padding: 24 }}>
         <Button title={"Logout"} onPress={() => navigate("login")} />
       </View>
@@ -22,7 +23,8 @@ Settings.navigationOptions = { headerTitle: "Settings" };
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "white"
   }
 });
 

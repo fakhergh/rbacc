@@ -1,12 +1,15 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, Button } from "react-native";
 
-const Register = () => {
-    return (
-        <View>
-            <Text>Register</Text>
-        </View>
-    );
+import { COLORS } from '../../tools/colors';
+
+const Register = ({ navigation: { openDrawer } }) => {
+  return (
+    <View style={{ flex: 1, backgroundColor: COLORS.icons }}>
+      <Text>Register</Text>
+      <Button title={"Open Drawer"} onPress={() => openDrawer()} />
+    </View>
+  );
 };
 
 export default Register;

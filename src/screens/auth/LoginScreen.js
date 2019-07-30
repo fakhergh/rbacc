@@ -1,11 +1,11 @@
 import React from "react";
 import { View, Text, Button } from "react-native";
 
-const Login = ({ navigation: { navigate } }) => {
+const Login = ({ navigation: { navigate, openDrawer } }) => {
   return (
-    <View>
+    <View style={{ flex: 1, backgroundColor: "white" }}>
       <Text>Login</Text>
-      <Button title={"Go to home"} onPress={() => navigate("home")} />
+      <Button title={"Open Drawer"} onPress={() => openDrawer()} />
     </View>
   );
 };

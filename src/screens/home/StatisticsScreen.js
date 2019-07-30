@@ -2,6 +2,8 @@ import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 import { Divider } from "react-native-paper";
 
+import { COLORS } from "../../tools/colors";
+
 const Statistics = () => {
   return (
     <View style={style.container}>
@@ -21,7 +23,7 @@ const Statistics = () => {
 };
 
 const style = StyleSheet.create({
-  container: { flex: 1 },
+  container: { flex: 1, backgroundColor: COLORS.icons },
   chartContainer: {
     flex: 1,
     alignItems: "center",
