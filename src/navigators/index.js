@@ -18,18 +18,11 @@ import {
   Item
 } from "react-navigation-header-buttons";
 
-const HeaderLeft = ({ openDrawer }) => {
-  return (
-    <TouchableNativeFeedback
-      background={TouchableNativeFeedback.SelectableBackgroundBorderless()}
-      onPress={openDrawer}
-    >
-      <View style={{ marginHorizontal: 16 }}>
-        <Icon name={"menu"} size={24} color={COLORS.icons} />
-      </View>
-    </TouchableNativeFeedback>
-  );
-};
+const HeaderLeft = ({ openDrawer }) => (
+  <HeaderButtons left HeaderButtonComponent={IconHeaderButton}>
+    <Item title="Menu" iconName="menu" onPress={openDrawer} />
+  </HeaderButtons>
+);
 
 const IconHeaderButton = passMeFurther => (
   <HeaderButton
@@ -40,18 +33,16 @@ const IconHeaderButton = passMeFurther => (
   />
 );
 
-const HeaderRight = () => {
-  return (
-    <HeaderButtons HeaderButtonComponent={IconHeaderButton}>
-      <Item title="Search" iconName="search" onPress={() => alert("Search")} />
-      <Item
-        title="Notifications"
-        iconName="notifications"
-        onPress={() => alert("Notifications")}
-      />
-    </HeaderButtons>
-  );
-};
+const HeaderRight = () => (
+  <HeaderButtons HeaderButtonComponent={IconHeaderButton}>
+    <Item title="Search" iconName="search" onPress={() => alert("Search")} />
+    <Item
+      title="Notifications"
+      iconName="notifications"
+      onPress={() => alert("Notifications")}
+    />
+  </HeaderButtons>
+);
 
 const appStack = createDrawerNavigator(
   {
