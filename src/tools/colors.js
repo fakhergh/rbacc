@@ -5,5 +5,6 @@ export const COLORS = {
   icons: "#FFFFFF",
   primaryText: "#212121",
   secondaryText: "#757575",
-  divider: "#BDBDBD"
+  divider: "#BDBDBD",
+  backgroundColor: "#FFFFFF"
 };

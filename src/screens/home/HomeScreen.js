@@ -1,22 +1,25 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const CreateTransaction = () => {
+import { COLORS } from "../../tools/colors";
+
+const Home = () => {
   return (
     <View style={styles.container}>
-      <Text>Create transaction form will be here</Text>
+      <Text>Home Screen</Text>
     </View>
   );
 };
 
-CreateTransaction.navigationOptions = { headerTitle: "Create new transaction" };
+Home.navigationOptions = { headerTitle: "Home" };
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "center",
     alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: COLORS.backgroundColor
   }
 });
 
-export default CreateTransaction;
+export default Home;

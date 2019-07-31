@@ -1,17 +1,18 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, Button, StyleSheet } from "react-native";
 
 import { COLORS } from "../../tools/colors";
 
-const Settings = () => {
+const Account = ({ navigation: { navigate } }) => {
   return (
     <View style={styles.container}>
-      <Text>Settings Screen</Text>
+      <Text>Account Screen</Text>
+      <Button title={"Logout"} onPress={() => navigate("authLoading")} />
     </View>
   );
 };
 
-Settings.navigationOptions = { headerTitle: "Settings" };
+Account.navigationOptions = { headerTitle: "Account" };
 
 const styles = StyleSheet.create({
   container: {
@@ -22,4 +23,4 @@ const styles = StyleSheet.create({
   }
 });
 
-export default Settings;
+export default Account;
